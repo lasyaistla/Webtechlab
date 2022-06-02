@@ -1,0 +1,31 @@
+<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <label for="">Array drop down</label>
+    <select name="array" id="operations"></select>
+    <select id="operations">
+  <option ><a href="array.html"> frequent in the array </a></option>
+  <option><a href="array2.html">Sort</a></option>
+  <option ><a href="array3.html">push </a></option>
+  <option ><a href="array4.html">pop </a></option>
+  <script>
+
+    var arr = [1,2,5,6,7];
+       Array.prototype.insert = function(data, position) {
+   if (position >= this.length)
+    {
+      this.push(data)   
+   } 
+   else if (position <= 0) {
+      this.unshift(data)  
+   }
+    else
+    { 
+       // Shift all elements to right
+      for (let i = this.length; i >= position; i--) {
+         this[i] = this[i - 1];
+      }
+      this[position] = data;
+   }
+}
+    </div>
+  </div> 
