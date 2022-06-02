@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most Frequent Element</title>
+</head>
+<body>
+    <script>
+        var arr=[];
+        var k;
+        var size=prompt("Enter the size of the array")
+        for(k=0;k<size;k++)
+        {
+            arr[k]=prompt("Enter the array element"+(k+1));
+        }
+        var mf = 1;
+        var m = 0;
+        var item;
+        for (var i=0; i<arr.length; i++)
+        {
+                for (var j=i; j<arr.length; j++)
+                {
+                        if (arr[i] == arr[j])
+                        m++;
+                        if (mf<m)
+                        {
+                        mf=m; 
+                        item = arr[i];
+                        }
+                }
+                m=0;
+        }
+        document.write(item+" ( " +mf +" times ) ") ;
+    </script>    
+</body>
+</html>
